@@ -4,7 +4,7 @@ class PublicationsController < ApplicationController
 
   # GET /publications or /publications.json
   def index
-    @publications = Publication.all
+    @publications = Publication.order(created_at: :desc) #Publication.all
   end
 
   # GET /publications/1 or /publications/1.json

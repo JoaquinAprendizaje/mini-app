@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Publications</h1>
+<div class="max-w-full">
+<h1 class="text-5xl">Publications</h1>
+<hr>
+</div>
 
 <div id="publications">
   <% @publications.each do |publication| %>
@@ -13,6 +15,7 @@
     <p>
       <%= link_to "Show this publication", publication %>
     </p>
+    <hr>
   <% end %>
 </div>
 
