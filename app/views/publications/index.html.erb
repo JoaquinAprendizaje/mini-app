@@ -4,6 +4,11 @@
 
 <div id="publications">
   <% @publications.each do |publication| %>
+    <% if publication.photo.attached? %>
+        <%if publication.photo.representable?%>
+            <%= image_tag publication.photo.representation(resize_to_limit: [200, 200])%>
+        <%end%>
+    <%end%>
     <%= render publication %>
     <p>
       <%= link_to "Show this publication", publication %>

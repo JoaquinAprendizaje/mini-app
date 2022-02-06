@@ -1,6 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @publication %>
+  <div class="photo-container">
+    <div class="photo">
+      <% if @publication.photo.attached?%>
+        <image src="<%=(url_for(@publication.photo))%>">
+        <% end %>
+    </div>
+  </div>
   <div class="comments-container">
     <div class="comments">
     
