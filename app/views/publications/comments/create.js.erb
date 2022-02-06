@@ -1,0 +1,11 @@
+<%- if @comment.persisted? %>
+    var parentNode = document.querySelector(".comments-container .comments")
+    var div = document.createElement("div")
+    div.innerHTML = "<%= j render 'publications/comments/comment', comment: @comment %>"
+    parentNode.appendChild(div)
+    document.getElementById("comment_body").value = "";
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth"
+    });
+<% end %>```
